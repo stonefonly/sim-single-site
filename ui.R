@@ -3,8 +3,10 @@
 shinyUI(fluidPage(
   titlePanel("Titration-curve simulation for single-site binding systems"),
   helpText("This App is for simulating the titration curve for a simple single-site binding system, assuming 1:1 binding of a receptor P to a gradually-added ligand L forming a PL complex. So you need to specify the initial concentration of total P, the final total-L-over-total-P ratio (L/P ratio), and an assumed dissociation constant Kd. The App will generate a curve for the fraction of bound P [i.e. P/(P+PL)] as a function of L/P ratio. You can simulate two systems at the same time for comparison. For basic concepts, please refer to the following documents:"),
-  a('http://rpubs.com/stonefonly/sim-single-site'),br(),
-  a('http://en.wikipedia.org/wiki/Dissociation_constant'),br(),
+  a(href='http://rpubs.com/stonefonly/sim-single-site-deck',
+         'http://rpubs.com/stonefonly/sim-single-site-deck'),br(),
+  a(href='http://en.wikipedia.org/wiki/Dissociation_constant',
+         'http://en.wikipedia.org/wiki/Dissociation_constant'),br(),
   hr(),
   
   sidebarLayout(
