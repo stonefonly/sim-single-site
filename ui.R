@@ -7,20 +7,21 @@ shinyUI(fluidPage(
          'http://stonefonly.github.com/sim-single-site-slidify'),br(),
   a(href='http://en.wikipedia.org/wiki/Dissociation_constant',
          'http://en.wikipedia.org/wiki/Dissociation_constant'),br(),
+  helpText("Please note that all parameters have to be positive values, otherwise meaningless output will be generated."),
   hr(),
   
   sidebarLayout(
     sidebarPanel(
       helpText("Input simulation parameters for the first single-site system (Red curve)"),
-      numericInput("p1",label=h4("Total P (uM)"), value=100),
-      numericInput("k1",label=h4("Kd (uM)"), value=1),
+      numericInput("p1",label=h4("Total P (uM)"), value=100,min=0),
+      numericInput("k1",label=h4("Kd (uM)"), value=1,min=0),
       hr(),
       helpText("Input simulation parameters for the second single-site system (Blue curve)"),
-      numericInput("p2",label=h4("Total P (uM)"), value=100),
-      numericInput("k2",label=h4("Kd (uM)"), value=10),
+      numericInput("p2",label=h4("Total P (uM)"), value=100,min=0),
+      numericInput("k2",label=h4("Kd (uM)"), value=10,min=0),
       hr(),
       helpText("Input final L/P ratio for both systems"),
-      numericInput("lx",label=h4("Final L/P ratio"), value=2)
+      numericInput("lx",label=h4("Final L/P ratio"), value=2,min=0)
     ),
     
     mainPanel(
